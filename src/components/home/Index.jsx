@@ -1,5 +1,5 @@
 function Index() {
-    return <h1>main</h1>
+    return 
 }
 
 export default Index
