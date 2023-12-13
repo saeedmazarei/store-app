@@ -16,7 +16,7 @@ function App() {
                 },
                 // other pages....
                 {
-                    path: '/about',
+                    path: '/product-details',
                     element: <ProductDetails />,
                 },
             ],
