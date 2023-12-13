@@ -7,6 +7,7 @@ const Home = lazy(() => import('./pages/Home'))
 const ProductDetails = lazy(() => import('./pages/ProductDetails'))
 const Page404 = lazy(() => import('./components/Page404'))
 import PathConstants from './routes/pathConstants'
+import './App.css'
 
 function App() {
     const router = createBrowserRouter([
