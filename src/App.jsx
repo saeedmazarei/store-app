@@ -6,6 +6,7 @@ import Layout from './components/Layout'
 const Home = lazy(() => import('./pages/Home'))
 const ProductDetails = lazy(() => import('./pages/ProductDetails'))
 const Page404 = lazy(() => import('./components/Page404'))
+import PathConstants from './routes/pathConstants'
 
 function App() {
     const router = createBrowserRouter([
@@ -17,12 +18,12 @@ function App() {
             // child route components
             children: [
                 {
-                    path: '/',
+                    path: PathConstants.HOME,
                     element: <Home />,
                 },
                 // other pages....
                 {
-                    path: '/product-details',
+                    path: PathConstants.PRODUCTDETAILS,
                     element: <ProductDetails />,
                 },
             ],
