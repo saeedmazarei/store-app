@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import styles from './Card.module.css'
+import styles from './Card.module.scss'
 
 function Card({ children, style }) {
     return <div className={styles.card} style={style}>{children}</div>
