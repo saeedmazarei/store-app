@@ -1,8 +1,11 @@
+import { lazy } from 'react'
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './pages/Home'
-import ProductDetails from './pages/ProductDetails'
+
 import Layout from './components/Layout'
-import Page404 from './components/Page404'
+const Home = lazy(() => import('./pages/Home'))
+const ProductDetails = lazy(() => import('./pages/ProductDetails'))
+const Page404 = lazy(() => import('./components/Page404'))
 
 function App() {
     const router = createBrowserRouter([
