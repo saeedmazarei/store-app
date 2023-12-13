@@ -3,7 +3,7 @@ import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
 
-function Layouts() {
+function Layout() {
     return (
         <>
             <Header />
@@ -15,4 +15,4 @@ function Layouts() {
     )
 }
 
-export default Layouts
+export default Layout
