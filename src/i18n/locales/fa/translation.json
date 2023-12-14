@@ -4,7 +4,19 @@
         "productList": "لیست محصولات",
         "getAdvice": "دریافت مشاوره",
         "frequentlyAskedQuestions": "سوالات متداول",
-        "contactUs": "تماس با ما"
+        "contactUs": "تماس با ما",
+        "answeringTime": "هفت روز هفته از ۸ صبح تا ۱۲ شب پاسخگو هستیم",
+        "quickAccess": "دسترسی سریع",
+        "aboutUs": "درباره ما",
+        "blog": "بلاگ",
+        "afterSaleService": "خدمات پس از فروش",
+        "siteGuid": "راهنمای سایت",
+        "termsAndConditions": "قوانین و مقررات",
+        "criticsAndSuggestions": "انتقادات و پیشنهادات",
+        "socialNetworks": "شبکه های اجتماعی",
+        "telegram": "تلگرام",
+        "instagram": "اینستاگرام",
+        "linkdin": "لینکدین"
     },
     "productDetails": {}
 }
