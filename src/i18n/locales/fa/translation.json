@@ -1,6 +1,10 @@
 {
     "home": {
-        "call": "تماس"
+        "call": "تماس",
+        "productList": "لیست محصولات",
+        "getAdvice": "دریافت مشاوره",
+        "frequentlyAskedQuestions": "سوالات متداول",
+        "contactUs": "تماس با ما"
     },
     "productDetails": {}
 }

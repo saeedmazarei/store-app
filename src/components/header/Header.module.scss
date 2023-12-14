@@ -1,8 +1,30 @@
-.button-content-container {
+.call-button {
+    width: 107px;
+    border-radius: 16px;
+    position: absolute;
+    left: 15%;
+}
+.text-and-icon {
     display: flex;
     justify-content: center;
     align-items: center;
     span {
-        margin-left: 10px;
+        margin-right: 5px;
+    }
+}
+
+.navigation-list {
+    width: 439px;
+    height: 40px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    a:hover {
+        color: red;
     }
 }
