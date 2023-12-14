@@ -1,8 +1,28 @@
+.header-card {
+    height: 120px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-icon {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 16px, 12px, 16px;
+    gap: 8px;
+    border: 1px solid #e20054;
+    border-radius: 8px;
+}
 .call-button {
     width: 107px;
     border-radius: 16px;
     position: absolute;
-    left: 15%;
+    left: 5.5%;
 }
 .text-and-icon {
     display: flex;
@@ -26,5 +46,36 @@
     }
     a:hover {
         color: red;
+    }
+}
+
+@media (max-width: 767px) {
+    .call-button {
+        width: 60px;
+        font-size: 10px;
+    }
+    .navigation-list {
+        width: 63%;
+        font-size: 10px;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 530px) {
+    .call-button {
+        width: 30px;
+        font-size: 5px;
+        display: none;
+    }
+    .navigation-list {
+        display: none;
+    }
+    .header-card {
+        height: 72px;
+        justify-content: space-between;
+    }
+    .mobile-icon {
+        display: flex;
+        margin: 5%;
     }
 }
