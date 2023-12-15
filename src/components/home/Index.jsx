@@ -26,7 +26,7 @@ function Index() {
 
     return (
         <div className={styles['main-container']}>
-            {loading && <img src='./assets/images/loading.gif' alt="Loading" />}
+            {loading && <img src="./assets/images/loading.gif" alt="Loading" />}
             {!loading && (
                 <>
                     <SideBarMenu />
