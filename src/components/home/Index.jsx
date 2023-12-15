@@ -1,6 +1,6 @@
-import ProductsList from './ProductsList'
+import ProductsList from './products-list/ProductsList'
 import styles from './Index.module.scss'
-import FilterAndSearch from './FilterAndSearch'
+import FilterAndSearch from './filters-and-search/FilterAndSearch'
 
 function Index() {
     return (

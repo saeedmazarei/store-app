@@ -1,4 +1,4 @@
-import ApplyedFilter from './ApplyedFilters'
+import ApplyedFilter from '../applyed-filters/ApplyedFilters'
 import styles from './ProductsList.module.scss'
 
 function ProductsList() {
