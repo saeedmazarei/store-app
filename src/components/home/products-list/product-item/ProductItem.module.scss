@@ -41,3 +41,15 @@
     background-color: red;
     color: #e9edf5;
 }
+
+@media (max-width: 767px) {
+    .card {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}

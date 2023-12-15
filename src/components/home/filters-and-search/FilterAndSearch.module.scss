@@ -5,3 +5,9 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+@media (max-width: 540px) {
+    .filter-search-container {
+        display: none;
+    }
+}
