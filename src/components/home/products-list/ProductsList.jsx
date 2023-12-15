@@ -1,11 +1,11 @@
-import ApplyedFilter from '../applyed-filters/ApplyedFilters'
+import AppliedFilter from '../applyed-filters/AppliedFilters'
 import styles from './ProductsList.module.scss'
 import ProductItem from './product-item/ProductItem'
 
 function ProductsList() {
     return (
         <div className={styles['products-list-container']}>
-            <ApplyedFilter />
+            <AppliedFilter />
             <div className={styles['product-item-container']}>
                 <ProductItem />
                 <ProductItem />

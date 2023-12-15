@@ -1,7 +1,7 @@
 import Card from '../../shared/Card'
 
-function ApplyedFilter() {
+function AppliedFilter() {
     return <Card style={{ width: '100%', height: '64px' }} />
 }
 
-export default ApplyedFilter
+export default AppliedFilter
