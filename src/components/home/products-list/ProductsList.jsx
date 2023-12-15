@@ -18,7 +18,7 @@ function ProductsList({ allProducts }) {
 }
 
 ProductsList.propTypes = {
-    allProducts: PropTypes.array.isRequired,
+    allProducts: PropTypes.array,
 }
 
 export default ProductsList

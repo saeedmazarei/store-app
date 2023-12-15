@@ -7,9 +7,9 @@ function Card({ children, style, className }) {
 }
 
 Card.propTypes = {
-    children: PropTypes.node.isRequired,
-    style: PropTypes.object.isRequired,
-    className: PropTypes.string.isRequired
+    children: PropTypes.node,
+    style: PropTypes.object,
+    className: PropTypes.string
 }
 
 export default Card
