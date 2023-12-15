@@ -1,4 +1,4 @@
-.filter-search-container {
+.side-bar-container {
     width: 25%;
     height: 572px;
     display: flex;
@@ -7,7 +7,7 @@
 }
 
 @media (max-width: 540px) {
-    .filter-search-container {
+    .side-bar-container {
         display: none;
     }
 }

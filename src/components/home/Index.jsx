@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 
 import ProductsList from './products-list/ProductsList'
 import styles from './Index.module.scss'
-import FilterAndSearch from './filters-and-search/FilterAndSearch'
 import { getAllProduct } from '../../services/apis'
+import SideBarMenu from './sidebar-menu/SideBarMenu'
 
 function Index() {
     const [allProducts, setAllProducts] = useState()
@@ -29,7 +29,7 @@ function Index() {
             {loading && <img src='./assets/images/loading.gif' alt="Loading" />}
             {!loading && (
                 <>
-                    <FilterAndSearch />
+                    <SideBarMenu />
                     <ProductsList allProducts={allProducts} />
                 </>
             )}
