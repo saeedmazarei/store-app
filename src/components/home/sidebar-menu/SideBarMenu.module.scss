@@ -6,6 +6,50 @@
     justify-content: space-between;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.text-container {
+    margin-right: 6%;
+    font-size: 13px;
+}
+
+.search-box {
+    width: 90%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #E8EDF6;
+    border-radius: 12px;
+    margin-right: 5%;
+    transition: border-color 0.3s;
+    input {
+        border: none;
+        outline: none;
+    }
+}
+
+.search-box:focus-within {
+    border-color: #E20054;
+  }
+
+.button {
+    width: 90%;
+    height: 40px;
+    border-radius: 12px;
+    padding: 124px, 10px, 124px;
+    gap: 8px;
+    color: #FFFFFF;
+    background-color: #E20054;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
 @media (max-width: 540px) {
     .side-bar-container {
         display: none;
