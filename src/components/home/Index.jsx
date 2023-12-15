@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
 
-import { AiOutlineLoading3Quarters } from 'react-icons/ai'
-
 import ProductsList from './products-list/ProductsList'
 import styles from './Index.module.scss'
 import FilterAndSearch from './filters-and-search/FilterAndSearch'
@@ -28,7 +26,7 @@ function Index() {
 
     return (
         <div className={styles['main-container']}>
-            {loading && <AiOutlineLoading3Quarters />}
+            {loading && <img src='./assets/images/loading.gif' alt="Loading" />}
             {!loading && (
                 <>
                     <FilterAndSearch />

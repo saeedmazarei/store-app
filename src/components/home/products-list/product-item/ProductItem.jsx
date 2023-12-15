@@ -7,7 +7,6 @@ import styles from './ProductItem.module.scss'
 
 function ProductItem({ item }) {
     const { t } = useTranslation()
-    console.log(item)
     return (
         <Card className={styles.card}>
             <Card className={styles['product-image-container']}>
