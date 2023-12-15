@@ -1,11 +1,39 @@
+import { useEffect, useState } from 'react'
+
 import { useTranslation } from 'react-i18next'
 import { IoIosArrowDown } from 'react-icons/io'
 
 import Card from '../../shared/Card'
 import styles from './SideBarMenu.module.scss'
+import { categorisedProduct } from '../../../services/apis'
 
 function Groupingbox() {
+    const [checkedItems, setCheckedItems] = useState({
+        jewelery: false,
+        "men's clothing": false,
+        electronics: false,
+    })
     const { t } = useTranslation()
+
+    const handleCheckboxChange = (itemName) => {
+        setCheckedItems({
+            ...checkedItems,
+            [itemName]: !checkedItems[itemName],
+        })
+    }
+
+    useEffect(() => {
+        const selectedCategories = Object.keys(checkedItems).filter((key) => checkedItems[key])
+        selectedCategories.forEach(async (category) => {
+            try {
+                const response = await categorisedProduct(category)
+                console.log(response.data)
+            } catch (error) {
+                console.error('Error while fetching category:', category, error)
+            }
+        })
+    }, [checkedItems])
+
     return (
         <Card style={{ width: '100%', height: '180px' }} className={styles.card}>
             <div className={`${styles['text-container']} ${styles['text-container-with-icon']}`}>
@@ -19,24 +47,24 @@ function Groupingbox() {
                     <label>
                         <input
                             type="checkbox"
-                            // checked={checkedItems.item1}
-                            // onChange={() => handleCheckboxChange('item1')}
+                            checked={checkedItems.jewelery}
+                            onChange={() => handleCheckboxChange('jewelery')}
                         />
                         <span>{t('home.building')}</span>
                     </label>
                     <label>
                         <input
                             type="checkbox"
-                            // checked={checkedItems.item2}
-                            // onChange={() => handleCheckboxChange('item2')}
+                            checked={checkedItems["men's clothing"]}
+                            onChange={() => handleCheckboxChange("men's clothing")}
                         />
                         <span>{t('home.health')}</span>
                     </label>
                     <label>
                         <input
                             type="checkbox"
-                            // checked={checkedItems.item3}
-                            // onChange={() => handleCheckboxChange('item3')}
+                            checked={checkedItems.electronics}
+                            onChange={() => handleCheckboxChange('electronics')}
                         />
                         <span>{t('home.factory')}</span>
                     </label>
