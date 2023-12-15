@@ -20,7 +20,12 @@
         "copyWriteTetx": "تمامی حقوق مادی و معنوی این وبسایت متعلق به می‌باشد و هر گونه کپی برداری پیگرد قانونی دارد.",
         "detail": "مشاهده جزییات",
         "filterAndSearch": "فیلتر و جستجو",
-        "search": "جستجو"
+        "search": "جستجو",
+        "sorting": "مرتب سازی",
+        "numberLowToHigh": "تعداد: کم به زیاد",
+        "numberHighToLow": "تعداد: زیاد به کم",
+        "rankHighToLow": "رتبه: زیاد به کم",
+        "rankLowToHigh": "رتبه: کم به زیاد"
     },
     "productDetails": {}
 }
