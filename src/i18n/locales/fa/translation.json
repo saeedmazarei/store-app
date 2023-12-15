@@ -25,7 +25,11 @@
         "numberLowToHigh": "تعداد: کم به زیاد",
         "numberHighToLow": "تعداد: زیاد به کم",
         "rankHighToLow": "رتبه: زیاد به کم",
-        "rankLowToHigh": "رتبه: کم به زیاد"
+        "rankLowToHigh": "رتبه: کم به زیاد",
+        "grouping": "دسته بندی",
+        "building": "مسکن و ساختمان",
+        "health": "بهداشت و درمان",
+        "factory": "صنعتی و کارخانه"
     },
     "productDetails": {}
 }

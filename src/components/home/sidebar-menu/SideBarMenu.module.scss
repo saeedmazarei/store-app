@@ -31,7 +31,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid #E8EDF6;
+    border: 1px solid #e8edf6;
     border-radius: 12px;
     margin-right: 5%;
     transition: border-color 0.3s;
@@ -43,8 +43,8 @@
 }
 
 .search-box:focus-within {
-    border-color: #E20054;
-  }
+    border-color: #e20054;
+}
 
 .button {
     width: 90%;
@@ -52,8 +52,8 @@
     border-radius: 12px;
     padding: 124px, 10px, 124px;
     gap: 8px;
-    color: #FFFFFF;
-    background-color: #E20054;
+    color: #ffffff;
+    background-color: #e20054;
     margin-right: 5%;
     cursor: pointer;
 }
@@ -65,7 +65,7 @@
     margin-right: 5%;
     justify-content: space-between;
     height: 70%;
-    color: #B2C1D6;
+    color: #b2c1d6;
     label {
         display: flex;
         align-items: center;
@@ -75,9 +75,43 @@
             font-size: 12px;
         }
     }
-    input[type="radio"] {
-        accent-color: #E20054;
-      }
+    input[type='radio'] {
+        accent-color: #e20054;
+    }
+    input[type='checkbox'] {
+        accent-color: #e20054;
+    }
+}
+
+.check-box-container {
+    height: 100%;
+}
+
+.grouping-and-number-box-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 60%;
+}
+
+.number-box-container {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.number-box {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    gap: 10px;
+    color: #FFFFFF;
+    font-size: 12px;
+    background-color: #E20054;
 }
 
 @media (max-width: 540px) {
