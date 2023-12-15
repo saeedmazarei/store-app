@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
+import { IoIosArrowBack } from "react-icons/io"
 
 import Button from '../../../shared/Button'
 import Card from '../../../shared/Card'
@@ -15,7 +16,7 @@ function ProductItem({ item }) {
             <div className={styles['product-text-container']}>
                 <span>{item.title}</span>
             </div>
-            <Button className={styles.button}>{t('home.detail')}</Button>
+            <Button className={styles.button}>{t('home.detail')} <IoIosArrowBack /></Button>
         </Card>
     )
 }

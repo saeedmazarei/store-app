@@ -35,6 +35,9 @@
     color: #E20054;
     background-color: #ffffff;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button:hover {
