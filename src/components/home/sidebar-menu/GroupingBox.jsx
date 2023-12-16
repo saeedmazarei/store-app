@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { IoIosArrowDown } from 'react-icons/io'
 
-import { setProductsList, selectProductsList } from '../../../store/slices/products'
+import { setProductsList } from '../../../store/slices/products'
 import Card from '../../shared/card/Card'
 import styles from './SideBarMenu.module.scss'
 import { categorisedProduct } from '../../../services/apis'
+import CategoryCount from './CategoryCount'
 
 function Groupingbox() {
     const [checkedItems, setCheckedItems] = useState({
@@ -16,13 +17,7 @@ function Groupingbox() {
         electronics: false,
     })
     const dispatch = useDispatch()
-    const productsList = useSelector(selectProductsList)
     const { t } = useTranslation()
-
-    const categoryCount = productsList?.reduce((acc, item) => {
-        acc[item.category] = (acc[item.category] || 0) + 1
-        return acc
-    }, {})
 
     const handleCheckboxChange = (itemName) => {
         setCheckedItems({
@@ -85,11 +80,7 @@ function Groupingbox() {
                         <span>{t('home.electronics')}</span>
                     </label>
                 </div>
-                <div className={styles['number-box-container']}>
-                    <div className={styles['number-box']}>{categoryCount?.jewelery}</div>
-                    <div className={styles['number-box']}>{categoryCount?.["men's clothing"]}</div>
-                    <div className={styles['number-box']}>{categoryCount?.electronics}</div>
-                </div>
+                <CategoryCount />
             </div>
         </Card>
     )
