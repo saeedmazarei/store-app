@@ -1,5 +1,5 @@
 import Card from "../card/Card"
-import loadingImage from '../../../../public/assets/images/loading.gif'
+import loadingImage from '/assets/images/loading.gif'
 import styles from './Loading.module.scss'
 
 function Loading() {
