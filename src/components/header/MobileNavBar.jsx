@@ -1,61 +1,38 @@
-import { useState } from 'react'
-
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { FiPhoneCall } from 'react-icons/fi'
 import { AiOutlineAppstore } from 'react-icons/ai'
 import { IoMdBook } from 'react-icons/io'
 import { CiSquareQuestion } from 'react-icons/ci'
 import { IoCallOutline } from 'react-icons/io5'
-import { TbPhoneCall } from 'react-icons/tb'
-import { IoIosMenu } from 'react-icons/io'
 
-import Button from '../shared/button/Button'
-import Card from '../shared/card/Card'
 import styles from './Header.module.scss'
-import MobileNavBar from './MobileNavBar'
 
-function Header() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+function MobileNavBar() {
     const { t } = useTranslation()
-
-    function menuHandler() {
-        setIsMenuOpen(prevState => !prevState)
-    }
-
     return (
-        <Card className={styles['header-card']}>
-            <Button className={styles['call-button']}>
-                <div className={styles['text-and-icon']}>
-                    <FiPhoneCall /> <span>{t('home.call')}</span>
-                </div>
-            </Button>
-            <div className={styles['mobile-icon']}>
-                <IoIosMenu style={{ color: '#E20054' }} onClick={menuHandler} />
-            </div>
-            {isMenuOpen && <MobileNavBar />}
-            <div className={styles['mobile-icon']}>
-                <TbPhoneCall style={{ color: '#E20054' }} />
-            </div>
-            <div className={styles['navigation-list']}>
+        <div className={styles['mobile-nav-container']}>
+            <div className={styles["link-container"]}>
                 <Link to="">
                     <div className={styles['text-and-icon']}>
                         <AiOutlineAppstore />
                         <span>{t('home.productList')}</span>
                     </div>
                 </Link>
+                <div className={styles.separator} />
                 <Link to="">
                     <div className={styles['text-and-icon']}>
                         <IoMdBook />
                         <span>{t('home.getAdvice')}</span>
                     </div>
                 </Link>
+                <div className={styles.separator} />
                 <Link to="">
                     <div className={styles['text-and-icon']}>
                         <CiSquareQuestion />
                         <span>{t('home.frequentlyAskedQuestions')}</span>
                     </div>
                 </Link>
+                <div className={styles.separator} />
                 <Link to="">
                     <div className={styles['text-and-icon']}>
                         <IoCallOutline />
@@ -63,8 +40,8 @@ function Header() {
                     </div>
                 </Link>
             </div>
-        </Card>
+        </div>
     )
 }
 
-export default Header
+export default MobileNavBar
