@@ -1,20 +1,23 @@
 import { useState } from 'react'
 
+import { useDispatch } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { IoIosArrowDown } from 'react-icons/io'
 
+import { setProductsList } from '../../../store/slices/products'
 import Card from '../../shared/card/Card'
 import styles from './SideBarMenu.module.scss'
 import { sortProduct } from '../../../services/apis'
 
 function SortBox() {
     const [selectedItem, setSelectedItem] = useState('')
+    const dispatch = useDispatch()
     const { t } = useTranslation()
 
     async function sortHandler(value) {
         setSelectedItem(value)
         const response = await sortProduct(value)
-        console.log(response.data.data)
+        dispatch(setProductsList(response.data))
     }
 
     return (
