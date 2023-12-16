@@ -8,6 +8,7 @@ const ProductDetails = lazy(() => import('./pages/ProductDetails'))
 const Page404 = lazy(() => import('./components/Page404'))
 import PathConstants from './routes/pathConstants'
 import './App.css'
+import AxiosErrorHandler from './services/ErrorHandler'
 
 function App() {
     const router = createBrowserRouter([
@@ -30,7 +31,12 @@ function App() {
             ],
         },
     ])
-    return <RouterProvider router={router} />
+    return (
+        <>
+            <AxiosErrorHandler />
+            <RouterProvider router={router} />
+        </>
+    )
 }
 
 export default App
