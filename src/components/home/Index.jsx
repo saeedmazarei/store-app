@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
 
-import { setProductsList } from '../../store/slices/products'
-import { selectProductsList } from '../../store/slices/products'
+import { setProductsList, setLoading } from '../../store/slices/products'
+import { selectProductsList, selectLoading } from '../../store/slices/products'
 import ProductsList from './products-list/ProductsList'
 import styles from './Index.module.scss'
 import { getAllProduct } from '../../services/apis'
@@ -12,17 +12,17 @@ import Loading from '../shared/loading/Loading'
 
 function Index() {
     const productList = useSelector(selectProductsList)
-    const [loading, setLoading] = useState(false)
+    const loading = useSelector(selectLoading)
     const dispatch = useDispatch()
 
     async function getAllProductsFunction() {
-        setLoading(true)
+        dispatch(setLoading(true))
         try {
             const response = await getAllProduct()
             dispatch(setProductsList(response.data))
-            setLoading(false)
+            dispatch(setLoading(false))
         } catch {
-            setLoading(false)
+            dispatch(setLoading(false))
         }
     }
 
