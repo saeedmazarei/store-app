@@ -10,13 +10,7 @@ function Layout() {
         <>
             <Header />
             <main>
-                <Suspense
-                    fallback={
-                        <div>
-                            <img src="./assets/images/loading.gif" alt="Loading" />
-                        </div>
-                    }
-                >
+                <Suspense>
                     <Outlet />
                 </Suspense>
             </main>

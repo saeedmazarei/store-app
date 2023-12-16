@@ -2,8 +2,8 @@ import { useTranslation } from "react-i18next"
 import { CiSearch } from "react-icons/ci"
 import { RxCross2 } from "react-icons/rx"
 
-import Card from "../../shared/Card"
-import Button from "../../shared/Button"
+import Card from "../../shared/card/Card"
+import Button from "../../shared/button/Button"
 import styles from './SideBarMenu.module.scss'
 
 function FilterAndSearch() {

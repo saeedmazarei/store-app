@@ -4,11 +4,11 @@ import { useParams } from 'react-router-dom'
 
 import { getSingleProduct } from '../../services/apis'
 
-import loadingImage from '../../../public/assets/images/loading.gif'
 import styles from './Index.module.scss'
 import TitleImageCard from './title-and-image/TitleImageCard'
 import DescriptionCard from './description/DescrptionCard'
 import Directories from './directories/Directories'
+import Loading from '../shared/loading/Loading'
 
 function Index() {
     const [productDetails, setProductDetails] = useState()
@@ -31,7 +31,7 @@ function Index() {
 
     return (
         <>
-            {loading && <img src={loadingImage} alt="Loading" />}
+            {loading && <Loading />}
             {!loading && (
                 <div className={styles['product-details-container']}>
                     <Directories productDetails={productDetails} />

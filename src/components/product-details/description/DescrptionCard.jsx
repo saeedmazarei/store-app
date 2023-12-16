@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 
-import Card from '../../shared/Card'
+import Card from '../../shared/card/Card'
 import styles from './DescrptionCard.module.scss'
 
 function DescriptionCard({ productDetails }) {

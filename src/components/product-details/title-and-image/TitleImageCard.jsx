@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import Card from '../../shared/Card'
+import Card from '../../shared/card/Card'
 import styles from './TitleImageCard.module.scss'
 
 function TitleImageCard({ productDetails }) {

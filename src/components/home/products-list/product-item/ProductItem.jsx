@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 import { IoIosArrowBack } from 'react-icons/io'
 
-import Button from '../../../shared/Button'
-import Card from '../../../shared/Card'
+import Button from '../../../shared/button/Button'
+import Card from '../../../shared/card/Card'
 import styles from './ProductItem.module.scss'
 
 function ProductItem({ item }) {

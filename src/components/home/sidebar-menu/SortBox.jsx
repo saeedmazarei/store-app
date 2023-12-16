@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { IoIosArrowDown } from 'react-icons/io'
 
-import Card from '../../shared/Card'
+import Card from '../../shared/card/Card'
 import styles from './SideBarMenu.module.scss'
 import { sortProduct } from '../../../services/apis'
 

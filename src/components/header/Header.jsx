@@ -8,8 +8,8 @@ import { IoCallOutline } from 'react-icons/io5'
 import { TbPhoneCall } from 'react-icons/tb'
 import { IoIosMenu } from 'react-icons/io'
 
-import Button from '../shared/Button'
-import Card from '../shared/Card'
+import Button from '../shared/button/Button'
+import Card from '../shared/card/Card'
 import styles from './Header.module.scss'
 
 function Header() {

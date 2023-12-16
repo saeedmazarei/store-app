@@ -4,6 +4,7 @@ import ProductsList from './products-list/ProductsList'
 import styles from './Index.module.scss'
 import { getAllProduct } from '../../services/apis'
 import SideBarMenu from './sidebar-menu/SideBarMenu'
+import Loading from '../shared/loading/Loading'
 
 function Index() {
     const [allProducts, setAllProducts] = useState()
@@ -26,7 +27,7 @@ function Index() {
 
     return (
         <div className={styles['main-container']}>
-            {loading && <img src="./assets/images/loading.gif" alt="Loading" />}
+            {loading && <Loading />}
             {!loading && (
                 <>
                     <SideBarMenu />
