@@ -27,9 +27,9 @@
         "rankHighToLow": "رتبه: زیاد به کم",
         "rankLowToHigh": "رتبه: کم به زیاد",
         "grouping": "دسته بندی",
-        "building": "مسکن و ساختمان",
-        "health": "بهداشت و درمان",
-        "factory": "صنعتی و کارخانه"
+        "mensClothing": "لباس مردانه",
+        "jewelery": "جواهرات",
+        "electronics": "الکترونیک"
     },
     "productDetails": {
         "technicalSpecifications": "مشخصات فنی",
