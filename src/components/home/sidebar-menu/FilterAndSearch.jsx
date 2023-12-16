@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { CiSearch } from 'react-icons/ci'
 import { RxCross2 } from 'react-icons/rx'
 
-import { setProductsList } from '../../../store/slices/products'
+import { setProductsList, setSearchInput } from '../../../store/slices/products'
 import { selectProductsList } from '../../../store/slices/products'
 import Card from '../../shared/card/Card'
 import Button from '../../shared/button/Button'
@@ -23,12 +23,14 @@ function FilterAndSearch() {
     function searchHandler() {
         const filteredArray = productList.filter((item) => item.title.toLowerCase().includes(searchRef.current.value))
         dispatch(setProductsList(filteredArray))
+        dispatch(setSearchInput(searchRef.current.value))
     }
 
     function clearSearch() {
         searchRef.current.value = ''
         const filteredArray = productsHistory.filter(item => item && item.length > 0)
         dispatch(setProductsList(filteredArray[0]))
+        dispatch(setSearchInput(null))
     }
 
     return (

@@ -29,7 +29,8 @@
         "grouping": "دسته بندی",
         "mensClothing": "لباس مردانه",
         "jewelery": "جواهرات",
-        "electronics": "الکترونیک"
+        "electronics": "الکترونیک",
+        "appliedFilter": "فیلترهای اعمال شده"
     },
     "productDetails": {
         "technicalSpecifications": "مشخصات فنی",
