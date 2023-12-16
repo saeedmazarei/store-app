@@ -31,5 +31,11 @@
         "health": "بهداشت و درمان",
         "factory": "صنعتی و کارخانه"
     },
-    "productDetails": {}
+    "productDetails": {
+        "technicalSpecifications": "مشخصات فنی",
+        "price": "قیمت",
+        "description": "توضیحات",
+        "rank": "رتبه",
+        "number": "تعداد"
+    }
 }

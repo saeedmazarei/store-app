@@ -8,6 +8,7 @@ import loadingImage from '../../../public/assets/images/loading.gif'
 import Card from '../shared/Card'
 import styles from './Index.module.scss'
 import TitleImageCard from './title-and-image/TitleImageCard'
+import DescriptionCard from './description/DescrptionCard'
 
 function Index() {
     const [productDetails, setProductDetails] = useState()
@@ -37,7 +38,7 @@ function Index() {
                         style={{ width: '85%', height: '64px', backgroundColor: '#E9EDF5' }}
                     ></Card>
                     <TitleImageCard productDetails={productDetails} />
-                    <Card style={{ width: '85%', height: '474px' }}></Card>
+                    <DescriptionCard productDetails={productDetails} />
                 </div>
             )}
         </>
