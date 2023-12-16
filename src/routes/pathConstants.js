@@ -1,6 +1,6 @@
 const PathConstants = {
     HOME: "/",
-    PRODUCTDETAILS: "/product-details"
+    PRODUCTDETAILS: "/product-details/:id"
 }
 
 export default PathConstants
