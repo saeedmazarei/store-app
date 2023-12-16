@@ -1,0 +1,22 @@
+.title-and-image-container {
+    width: 85%;
+    height: 415px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    p {
+        width: 95%;
+    }
+}
+
+.image-container {
+    width: 95%; 
+    height: 310px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: inherit;
+    }
+}

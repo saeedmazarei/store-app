@@ -4,6 +4,11 @@ import { useParams } from 'react-router-dom'
 
 import { getSingleProduct } from '../../services/apis'
 
+import loadingImage from '../../../public/assets/images/loading.gif'
+import Card from '../shared/Card'
+import styles from './Index.module.scss'
+import TitleImageCard from './title-and-image/TitleImageCard'
+
 function Index() {
     const [productDetails, setProductDetails] = useState()
     const [loading, setLoading] = useState(false)
@@ -23,7 +28,20 @@ function Index() {
         getProductDetails()
     }, [id])
 
-    return <h1>Product details</h1>
+    return (
+        <>
+            {loading && <img src={loadingImage} alt="Loading" />}
+            {!loading && (
+                <div className={styles['product-details-container']}>
+                    <Card
+                        style={{ width: '85%', height: '64px', backgroundColor: '#E9EDF5' }}
+                    ></Card>
+                    <TitleImageCard productDetails={productDetails} />
+                    <Card style={{ width: '85%', height: '474px' }}></Card>
+                </div>
+            )}
+        </>
+    )
 }
 
 export default Index
