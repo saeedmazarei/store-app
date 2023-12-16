@@ -1,5 +1,5 @@
 .description-container {
-    width: 85%; 
+    width: 85%;
     height: 474px;
     display: flex;
     flex-direction: column;
@@ -16,6 +16,7 @@
     height: 386px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .right-boxes-container {
@@ -35,7 +36,7 @@
 }
 
 .technical-title {
-    background-color: #E9EDF5;
+    background-color: #e9edf5;
     width: 100%;
     display: flex;
     align-items: center;
@@ -45,13 +46,13 @@
     border-bottom-left-radius: 4px;
     span {
         margin-right: 10%;
-        color: #58728D;
+        color: #58728d;
         font-size: 12px;
     }
 }
 
-.technical-description{
-    background-color: #E9EDF5;
+.technical-description {
+    background-color: #e9edf5;
     width: 100%;
     display: flex;
     align-items: center;
@@ -71,4 +72,34 @@
 
 .tall-height {
     height: 146px;
+}
+
+@media (max-width: 540px) {
+    .description-container {
+        height: 900px;
+    }
+    .table-container {
+        height: 801px;
+    }
+    .right-boxes-container {
+        width: 100%;
+        height: auto;
+    }
+    .left-boxes-container {
+        width: 100%;
+        height: auto;
+        margin-top: 5%;
+    }
+    .technical-title {
+        span {
+            margin-right: 5%;
+            font-size: 10px;
+        }
+    }
+    .technical-description {
+        span {
+            margin-right: 5%;
+            font-size: 10px;
+        }
+    }
 }

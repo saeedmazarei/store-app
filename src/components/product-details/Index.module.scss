@@ -7,3 +7,9 @@
     justify-content: space-between;
     margin-bottom: 40px;
 }
+
+@media (max-width: 540px) {
+    .product-details-container {
+        height: 1440px;
+    }
+}
