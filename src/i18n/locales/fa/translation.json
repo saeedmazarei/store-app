@@ -38,5 +38,10 @@
         "description": "توضیحات",
         "rank": "رتبه",
         "number": "تعداد"
+    },
+    "notFoundPage": {
+        "404": "404",
+        "notFound": "صفحه مورد نظر یافت نشد",
+        "backToHome": "برگشت به خانه"
     }
 }
