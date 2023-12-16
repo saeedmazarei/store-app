@@ -32,10 +32,10 @@ function Index() {
 
     return (
         <div className={styles['main-container']}>
+            <SideBarMenu />
             {loading && <Loading />}
             {!loading && (
                 <>
-                    <SideBarMenu />
                     <ProductsList allProducts={productList} />
                 </>
             )}
