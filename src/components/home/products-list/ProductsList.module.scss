@@ -12,3 +12,9 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+@media (max-width: 540px) {
+    .products-list-container {
+        width: 85%;
+    }
+}

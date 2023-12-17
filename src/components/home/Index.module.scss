@@ -5,6 +5,12 @@
     align-items: flex-start;
 }
 
+@media (min-width: 1100px) {
+    .main-container{
+        width: 822px;
+    }
+}
+
 @media (max-width: 540px) {
     .main-container {
         justify-content: center;
