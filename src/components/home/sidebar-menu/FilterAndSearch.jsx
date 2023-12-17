@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
 import { useTranslation } from 'react-i18next'
@@ -12,8 +12,8 @@ import Button from '../../shared/button/Button'
 import styles from './SideBarMenu.module.scss'
 
 function FilterAndSearch() {
-    const[productsHistory] = useState([])
-    const searchRef = useRef()
+    const [productsHistory] = useState([])
+    const [searchValue, setSearchValue] = useState('')
     const productList = useSelector(selectProductsList)
     const dispatch = useDispatch()
     const { t } = useTranslation()
@@ -21,14 +21,18 @@ function FilterAndSearch() {
     productsHistory.push(productList)
 
     function searchHandler() {
-        const filteredArray = productList.filter((item) => item.title.toLowerCase().includes(searchRef.current.value))
+        const filteredArray = productList.filter((item) =>
+            item.title.toLowerCase().includes(searchValue),
+        )
         dispatch(setProductsList(filteredArray))
-        dispatch(setSearchInput(searchRef.current.value))
+        dispatch(setSearchInput(searchValue))
     }
 
+    const searchAssignHandler = (value) => setSearchValue(value.target.value)
+
     function clearSearch() {
-        searchRef.current.value = ''
-        const filteredArray = productsHistory.filter(item => item && item.length > 0)
+        setSearchValue('')
+        const filteredArray = productsHistory.filter((item) => item && item.length > 0)
         dispatch(setProductsList(filteredArray[0]))
         dispatch(setSearchInput(null))
     }
@@ -40,8 +44,8 @@ function FilterAndSearch() {
             </div>
             <div className={styles['search-box']}>
                 <CiSearch style={{ color: '#E20054' }} />
-                <input type="text" ref={searchRef} />
-                <RxCross2 onClick={clearSearch} />
+                <input type="text" onChange={searchAssignHandler} value={searchValue} />
+                {searchValue && <RxCross2 onClick={clearSearch} />}
             </div>
             <Button className={styles.button} onClick={searchHandler}>
                 {t('home.search')}
